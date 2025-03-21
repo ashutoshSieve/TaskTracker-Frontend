@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Completed Tasks Container */
+.completed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Heading */
+.completed-container h3 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Task List */
+.completed-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+/* Task Item Styling */
+.completed-list li {
+    background: #ffffff;
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #34495e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+/* Hover Effects */
+.completed-list li:hover {
+    background: #27ae60;
+    color: #ffffff;
+    transform: scale(1.03);
+}
+
+/* No Task Message */
+.no-tasks {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .completed-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .completed-list li {
+        font-size: 16px;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,177 @@
+/* General Page Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+.passed-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-height: 80vh; /* Prevent footer from moving up */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Task Details */
+.task-card {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.task-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.task-date {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Year Section */
+.year-section {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.year-toggle {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #2980b9;
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+.year-toggle:hover {
+    background-color: #ecf0f1;
+}
+
+/* Month Section */
+.month-section {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Editable Month Subheading */
+.month-subheading {
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    padding: 10px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+/* Individual Day Styling */
+.calendar-day {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    background: #ecf0f1;
+    color: #2c3e50;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.calendar-day:hover {
+    background: #bdc3c7;
+}
+
+/* Past dates */
+.past-date {
+    color: #7f8c8d;
+    background: rgba(200, 200, 200, 0.3);
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.past-date:hover {
+    background: rgba(200, 200, 200, 0.5);
+}
+
+/* Future dates */
+.future-date {
+    background: #2ecc71;
+    color: white;
+}
+
+.future-date:hover {
+    background: #27ae60;
+}
+
+/* Weekday Headers */
+.weekday-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    background: #3498db;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .year-toggle {
+        font-size: 1.4rem;
+    }
+
+    .month-subheading {
+        font-size: 1.2rem;
+    }
+
+    .calendar-day {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Fix Footer Position */
+.footer {
+    margin-top: auto;
+    padding: 15px;
+    text-align: center;
+    width: 98%;
+}

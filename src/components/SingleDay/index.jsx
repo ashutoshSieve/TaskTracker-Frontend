@@ -129,11 +129,11 @@ function SingleDay() {
 
                                 <div className="task-actions">
                                     {editingTask === task ? (
-                                        <button onClick={() => saveEditing(task)} className="save-btn">💾</button>
+                                        <button onClick={() => saveEditing(task)} className="save-btn1">💾</button>
                                     ) : (
-                                        <button onClick={() => { setEditingTask(task); setEditedText(task); }} className="edit-btn">✏️</button>
+                                        <button onClick={() => { setEditingTask(task); setEditedText(task); }} className="edit-btn1">✏️</button>
                                     )}
-                                    <button onClick={() => deleteTask(task)} className="delete-btn">🗑️</button>
+                                    <button onClick={() => deleteTask(task)} className="delete-btn1">🗑️</button>
                                 </div>
                             </div>
                         ))

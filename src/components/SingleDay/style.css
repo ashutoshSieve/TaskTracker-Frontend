@@ -126,7 +126,7 @@ body {
 }
 
 /* Action Buttons */
-.edit-btn, .save-btn, .delete-btn {
+.edit-btn1, .save-btn1, .delete-btn1 {
     background: transparent;
     border: none;
     cursor: pointer;

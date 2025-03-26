@@ -1,0 +1,193 @@
+/* ===== General Page Styling ===== */
+.single-day-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #eef2f7, #d9e2ec);
+    padding-top: 80px; /* Prevent navbar overlap */
+}
+
+/* ===== Container Styling ===== */
+.single-day-container {
+    width: 95%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ===== Date Heading ===== */
+.date-heading {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ===== Quote Styling ===== */
+.main-quote {
+    font-size: 16px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ===== Task Input Area ===== */
+.task-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background: transparent;
+}
+
+.add-task-btn {
+    background: #3498db;
+    color: white;
+    font-size: 20px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.add-task-btn:hover {
+    background: #217dbb;
+}
+
+/* ===== Task List Styling ===== */
+.task-list {
+    margin-top: 20px;
+}
+
+.no-tasks {
+    font-size: 16px;
+    color: #777;
+}
+
+/* ===== Individual Task Card ===== */
+.task-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.task-card:hover {
+    transform: scale(1.02);
+}
+
+/* ===== Task Text & Actions ===== */
+.task-text {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===== Buttons Styling ===== */
+.edit-btn1, .delete-btn1, .save-btn1 {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.edit-btn1 { color: #f39c12; }
+.delete-btn1 { color: #e74c3c; }
+.save-btn1 { color: #2ecc71; }
+
+.edit-btn1:hover { color: #d68910; }
+.delete-btn1:hover { color: #c0392b; }
+.save-btn1:hover { color: #27ae60; }
+
+/* ===== Checkbox for Task Completion ===== */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* ===== Completed Task Styling ===== */
+.completed .task-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+/* ===== Footer Styling ===== */
+.footer {
+    width: 100%;
+    padding: 15px;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== 🔥 Responsive Design ===== */
+@media (max-width: 768px) {
+    .single-day-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .task-input {
+        font-size: 14px;
+    }
+
+    .task-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .date-heading {
+        font-size: 22px;
+    }
+
+    .main-quote {
+        font-size: 14px;
+    }
+
+    .task-input {
+        font-size: 14px;
+    }
+
+    .task-card {
+        padding: 8px;
+    }
+}

@@ -1,0 +1,129 @@
+/* === Scoped Styles for Signup Page === */
+.signupContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #141e30, #243b55);
+}
+
+/* Signup Card with Glass Effect */
+.signupCard {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.signupCard:hover {
+    transform: scale(1.02);
+}
+
+.signupTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inputField {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.inputField::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.inputField:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+/* Sign Up Button */
+.signupButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.signupButton:hover {
+    background-color: #ff5252;
+    transform: scale(1.05);
+}
+
+/* Google Signup Button */
+.googleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border: none;
+}
+
+.googleIcon {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.googleButton:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .signupCard {
+        width: 90%;
+        padding: 30px;
+    }
+    
+    .signupTitle {
+        font-size: 1.8rem;
+    }
+
+    .inputField {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .signupButton, .googleButton {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

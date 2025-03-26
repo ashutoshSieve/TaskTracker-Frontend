@@ -1,0 +1,179 @@
+/* General Styles */
+.passed-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px; /* Ensure content doesn't go inside navbar */
+}
+
+/* Navbar Fix */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    z-index: 1000;
+}
+
+/* Page Container */
+.passed-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Task Card */
+.task-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.task-name {
+    font-size: 1.5rem;
+    color: #2980b9;
+}
+
+.task-date {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Year Section */
+.year-section {
+    margin-bottom: 15px;
+}
+
+.year-toggle {
+    width: 100%;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.year-toggle:hover {
+    background-color: #2980b9;
+}
+
+/* Months Container */
+.months-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.month-section {
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.month-subheading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    color: #2c3e50;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.month-subheading:focus {
+    outline: none;
+    border-bottom: 2px solid #2980b9;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 5px;
+    padding: 10px;
+}
+
+.calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.calendar-day:hover {
+    background-color: #2980b9;
+}
+
+.past-date {
+    background-color: #7f8c8d;
+}
+
+.past-date:hover {
+    background-color: #95a5a6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .passed-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .task-name {
+        font-size: 1.3rem;
+    }
+
+    .year-toggle {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .year-toggle {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .calendar-grid {
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    }
+}

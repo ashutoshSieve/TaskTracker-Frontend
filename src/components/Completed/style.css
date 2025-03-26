@@ -1,0 +1,77 @@
+/* Navbar and Footer Fix */
+.completed-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* Ensures navbar doesn't overlap content */
+}
+
+/* Completed Container */
+.completed-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Completed List */
+.completed-list {
+    list-style: none;
+    padding: 0;
+}
+
+.completed-list li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.completed-list li:hover {
+    background: #e3f2fd;
+    transform: scale(1.02);
+    color: #007bff;
+}
+
+/* No Tasks Message */
+.no-tasks {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+/* Footer Fix */
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 768px) {
+    .completed-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .completed-list li {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .no-tasks {
+        font-size: 14px;
+    }
+}

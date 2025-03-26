@@ -1,0 +1,147 @@
+/* ======= Main Page Styling ======= */
+.main-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+    color: #333; /* Changed to Dark Gray for better contrast */
+    font-family: "Poppins", sans-serif;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Welcome Message */
+.main-welcome {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #222; /* Darkened for better visibility */
+}
+
+/* Quote */
+.main-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #444; /* Slightly darker for readability */
+    margin-bottom: 20px;
+}
+
+/* ======= Sections Styling ======= */
+.task-section, .notepad-section, .ongoing-section, .completed-section {
+    background: rgba(255, 255, 255, 0.85); /* Increased opacity for visibility */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Darker shadow to make sections pop */
+}
+
+/* Hover effect */
+.task-section:hover, 
+.notepad-section:hover, 
+.ongoing-section:hover, 
+.completed-section:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222; /* Darkened for contrast */
+}
+
+/* ======= Buttons Styling ======= */
+.main-btn {
+    background: #ff9800;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.main-btn:hover {
+    background: #ffab40;
+    transform: scale(1.05);
+}
+
+/* Individual Button Colors */
+.main-btn-notepad {
+    background: #673ab7;
+}
+
+.main-btn-notepad:hover {
+    background: #7e57c2;
+}
+
+.main-btn-ongoing {
+    background: #ff5722;
+}
+
+.main-btn-ongoing:hover {
+    background: #ff7043;
+}
+
+.main-btn-completed {
+    background: #4caf50;
+}
+
+.main-btn-completed:hover {
+    background: #66bb6a;
+}
+
+/* ======= Responsive Design ======= */
+@media (max-width: 768px) {
+    .main-welcome {
+        font-size: 1.5rem;
+    }
+
+    .main-quote {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .main-btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        width: 95%;
+    }
+
+    .main-welcome {
+        font-size: 1.3rem;
+    }
+
+    .main-quote {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .main-btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+}

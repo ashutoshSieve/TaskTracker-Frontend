@@ -1,0 +1,205 @@
+/* ===== General Page Styling ===== */
+.task-details-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    padding-top: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Container Styling ===== */
+.task-details-container {
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* ===== Past Tracks Button ===== */
+.past-tracks-btn {
+    background: #ff6b6b;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+.past-tracks-btn:hover {
+    background: #e63946;
+}
+
+/* ===== Month Heading Styling ===== */
+.month-heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.month-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.edit-month-heading {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    width: 200px;
+}
+
+.edit-btn {
+    background: #3498db;
+    color: white;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+    background: #217dbb;
+}
+
+/* ===== Current Month Styling ===== */
+.current-month {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* ===== Task Card Styling ===== */
+.task-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.task-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+}
+
+.task-date {
+    font-size: 16px;
+    color: #666;
+}
+
+/* ===== Beautiful Calendar Styling ===== */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+/* Calendar Days */
+.calendar-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #42a5f5, #1976d2);
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-day:hover {
+    background: linear-gradient(135deg, #1e88e5, #0d47a1);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Past Dates */
+.past-date {
+    background: #ddd !important;
+    color: #888 !important;
+    pointer-events: none;
+}
+
+/* ===== Footer Styling ===== */
+.footer {
+    width: 100%;
+    padding: 15px;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .task-details-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        padding: 15px;
+    }
+
+    .calendar-day {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .task-details-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .month-heading {
+        font-size: 22px;
+    }
+
+    .current-month {
+        font-size: 18px;
+    }
+
+    .calendar {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+        padding: 12px;
+    }
+
+    .calendar-day {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+}

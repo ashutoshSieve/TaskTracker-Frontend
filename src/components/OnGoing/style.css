@@ -1,0 +1,141 @@
+/* Navbar and Footer Fix */
+.ongoing-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* Ensures navbar doesn't overlap content */
+}
+
+/* Ongoing Container */
+.ongoing-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Ongoing List */
+.ongoing-list {
+    list-style: none;
+    padding: 0;
+}
+
+.ongoing-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.ongoing-list li:hover {
+    background: #f9f9f9;
+    transform: scale(1.02);
+}
+
+/* Task Name */
+.task-name {
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.task-name:hover {
+    color: #007bff;
+}
+
+/* Graph Link */
+.ongoing-list a {
+    margin: 0 15px; /* 🔥 Added spacing between name and graph */
+    text-decoration: none;
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.ongoing-list a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Task Date */
+.task-date {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Trash Icon */
+.trash-icon {
+    font-size: 20px;
+}
+
+/* No Tasks Message */
+.no-tasks {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+
+/* Footer Fix */
+.footer {
+    margin-top: auto; /* Ensures footer stays at the bottom */
+    padding: 20px;
+    background: #222;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* 🔥 Responsive Design */
+@media (max-width: 768px) {
+    .ongoing-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .ongoing-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-name {
+        font-size: 16px;
+    }
+
+    .ongoing-list a {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .task-date {
+        font-size: 12px;
+    }
+
+    .delete-btn {
+        margin-top: 5px;
+    }
+}

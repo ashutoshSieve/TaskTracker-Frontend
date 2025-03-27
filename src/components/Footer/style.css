@@ -1,6 +1,6 @@
-/* ======= Footer Styling ======= */
+
 .footer {
-    background: #121212; /* Dark background */
+    background: #121212; 
     color: #ffffff;
     text-align: center;
     padding: 20px 10px;
@@ -37,7 +37,7 @@
     transform: scale(1.05);
 }
 
-/* Responsive Footer */
+
 @media (max-width: 600px) {
     .footer {
         font-size: 0.9rem;

@@ -1,4 +1,4 @@
-/* ======= Main Page Styling ======= */
+
 .main-page {
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     margin-top: 80px;
 }
 
-/* ======= Notepad Page Styling ======= */
+
 .notepad-page {
     display: flex;
     flex-direction: column;
@@ -56,7 +56,7 @@
     margin-bottom: 15px;
 }
 
-/* Rough Board Effect for Textarea */
+
 .notepad-textarea {
     width: 100%;
     height: 250px;
@@ -96,17 +96,17 @@
     transform: scale(1.05);
 }
 
-/* ======= Footer Styling ======= */
+
 .footer {
     background: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: auto; /* Push footer to bottom */
+    margin-top: auto; 
     width: 100%;
 }
 
-/* ======= Responsive Design ======= */
+
 @media (max-width: 768px) {
     .main-welcome {
         font-size: 1.5rem;

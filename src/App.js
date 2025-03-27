@@ -28,7 +28,7 @@ function App() {
         <Route path="/passed/:id" element={<Passed/>} />
         <Route path="/notepad" element={<Notepad/>} />
         <Route path="/graph/:name" element={<Graph/>} />
-        <Route path="/singleDay/:id/:date/:month/:year" element={<SingleDay/>} />
+        <Route path="/singleDay/:id/:taskName/:date/:month/:year" element={<SingleDay/>} />
       </Routes>
     </Router>
   );

@@ -11,14 +11,13 @@ function TaskDetails() {
     const [isEditing, setIsEditing] = useState(false);
     const navigate = useNavigate();
 
-    // Get current date details
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth();
     const currentDay = today.getDate();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    // Convert month number to name
+    
     const monthNames = [
         "January", "February", "March", "April", "May", "June", 
         "July", "August", "September", "October", "November", "December"
@@ -36,7 +35,7 @@ function TaskDetails() {
                 window.location.href = data.redirect;
             }
             setTask(data.task);
-            setMonthHeading(data.task?.monthHeading || "Task Overview"); // Load heading from DB
+            setMonthHeading(data.task?.monthHeading || "Task Overview"); 
         })
         .catch((err) => console.error("Error fetching task details:", err));
     }, [id]);
@@ -67,7 +66,7 @@ function TaskDetails() {
                     Past Tracks
                 </button>
 
-                {/* Editable Task Overview Heading */}
+                
                 <div className="month-heading-container">
                     {isEditing ? (
                         <input
@@ -84,10 +83,10 @@ function TaskDetails() {
                     </button>
                 </div>
 
-                {/* Display Current Month Name */}
+                
                 <h3 className="current-month">{currentMonthName} {year}</h3>
 
-                {/* Task Details Styled as a Card */}
+                
                 {task ? (
                     <div className="task-card">
                         <h3 className="task-name">{task.name}</h3>
@@ -98,7 +97,7 @@ function TaskDetails() {
                     <p>Loading task details...</p>
                 )}
 
-                {/* Calendar Grid */}
+                
                 <div className="calendar">
                     {[...Array(daysInMonth)].map((_, day) => {
                         const dateNumber = day + 1;

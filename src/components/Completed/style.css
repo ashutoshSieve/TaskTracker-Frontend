@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 80px; /* Ensures navbar doesn't overlap content */
+    padding-top: 80px; 
 }
 
 /* Completed Container */
@@ -59,7 +59,7 @@
     font-size: 14px;
 }
 
-/* 🔥 Responsive Design */
+
 @media (max-width: 768px) {
     .completed-container {
         width: 90%;

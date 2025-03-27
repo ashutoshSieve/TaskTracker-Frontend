@@ -11,7 +11,7 @@ function Passed() {
     const [subHeadings, setSubHeadings] = useState({});
 
     useEffect(() => {
-        fetch(`https://tasktracker-backend-4yas.onrender.com/details/${id}`, {
+        fetch(`http://localhost:5000/details/${id}`, {
             method: "GET",
             credentials: "include"
         })
@@ -84,7 +84,7 @@ function Passed() {
                                             {calendarData[year][month].map(({ day, isPast }) => (
                                                 <Link 
                                                     key={day} 
-                                                    to={`/singleDay/${id}/${day}/${month}/${year}`} 
+                                                    to={`/singleDay/${id}/${task?.name}/${day}/${month}/${year}`} 
                                                     className={`calendar-day ${isPast ? "past-date" : ""}`}
                                                 >
                                                     {day}

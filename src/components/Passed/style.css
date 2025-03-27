@@ -6,7 +6,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding-top: 80px; /* Ensure content doesn't go inside navbar */
+    padding-top: 80px; 
 }
 
 /* Navbar Fix */
@@ -139,7 +139,7 @@ h2 {
     background-color: #95a5a6;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .passed-container {
         padding: 15px;

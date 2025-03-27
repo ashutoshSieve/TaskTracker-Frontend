@@ -5,7 +5,7 @@ import Footer from "../Footer";
 import { useParams } from "react-router-dom";
 
 function SingleDay() {
-    const { id, date, month, year } = useParams();
+    const { id, taskName, date, month, year } = useParams();
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
     const [editingTask, setEditingTask] = useState(null);
@@ -29,7 +29,7 @@ function SingleDay() {
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const response = await fetch(`https://tasktracker-backend-4yas.onrender.com/workDetail/${id}?date=${date}&month=${month}&year=${year}`, {
+                const response = await fetch(`http://localhost:5000/workDetail/${id}/${taskName}?date=${date}&month=${month}&year=${year}`, {
                     method: "GET",
                     credentials: "include",
                 });
@@ -40,17 +40,17 @@ function SingleDay() {
             }
         };
         fetchTasks();
-    }, [id, date, month, year]);
+    }, [id, taskName, date, month, year]);
 
     const addTask = async () => {
         if (newTask.trim() === "") return;
 
         try {
-            await fetch("https://tasktracker-backend-4yas.onrender.com/addTask", {
+            await fetch("http://localhost:5000/addTask", {
                 method: "POST",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ id, date: Number(date), month, year: Number(year), taskText: newTask, completed: false }),
+                body: JSON.stringify({ id, date: Number(date), month, year: Number(year), taskText: newTask, completed: false, taskName }),
             });
 
             setTasks([...tasks, { text: newTask, completed: false }]);
@@ -62,7 +62,7 @@ function SingleDay() {
 
     const deleteTask = async (taskText) => {
         try {
-            await fetch("https://tasktracker-backend-4yas.onrender.com/deleteTask", {
+            await fetch("http://localhost:5000/deleteTask", {
                 method: "DELETE",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -76,7 +76,7 @@ function SingleDay() {
 
     const saveEditing = async (oldTaskText) => {
         try {
-            await fetch("https://tasktracker-backend-4yas.onrender.com/updateTask", {
+            await fetch("http://localhost:5000/updateTask", {
                 method: "PUT",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -95,7 +95,7 @@ function SingleDay() {
                 task.text === taskText ? { ...task, isComplete: !task.isComplete } : task
             );
     
-            await fetch("https://tasktracker-backend-4yas.onrender.com/toggleTaskCompletion", {
+            await fetch("http://localhost:5000/toggleTaskCompletion", {
                 method: "PUT",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },

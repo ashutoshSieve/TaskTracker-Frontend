@@ -101,7 +101,7 @@
     }
 
     .auth-buttons {
-        display: none; /* Hide logout button in mobile */
+        display: block; 
     }
 }
 

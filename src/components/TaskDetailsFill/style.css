@@ -144,7 +144,6 @@
 .past-date {
     background: #ddd !important;
     color: #888 !important;
-    pointer-events: none;
 }
 
 /* ===== Footer Styling ===== */

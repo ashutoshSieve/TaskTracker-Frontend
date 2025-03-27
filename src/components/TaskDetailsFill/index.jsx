@@ -11,6 +11,7 @@ function TaskDetails() {
     const [isEditing, setIsEditing] = useState(false);
     const navigate = useNavigate();
 
+    
     const today = new Date();
     const year = today.getFullYear();
     const month = today.getMonth();
@@ -25,7 +26,7 @@ function TaskDetails() {
     const currentMonthName = monthNames[month];
 
     useEffect(() => {
-        fetch(`https://tasktracker-backend-4yas.onrender.com/details/${id}`, {
+        fetch(`http://localhost:5000/details/${id}`, {
             method: "GET",
             credentials: "include",
         })
@@ -36,12 +37,13 @@ function TaskDetails() {
             }
             setTask(data.task);
             setMonthHeading(data.task?.monthHeading || "Task Overview"); 
+            
         })
         .catch((err) => console.error("Error fetching task details:", err));
     }, [id]);
 
     const updateMonthHeading = () => {
-        fetch(`https://tasktracker-backend-4yas.onrender.com/updateMonthHeading/${id}`, {
+        fetch(`http://localhost:5000/updateMonthHeading/${id}`, {
             method: "PUT",
             credentials: "include",
             headers: {
@@ -106,7 +108,7 @@ function TaskDetails() {
                         return (
                             <Link
                                 key={dateNumber}
-                                to={`/singleDay/${id}/${dateNumber}/${currentMonthName}/${year}`}
+                                to={`/singleDay/${id}/${task?.name}/${dateNumber}/${currentMonthName}/${year}`}
                                 className={`calendar-day ${isPast ? "past-date" : ""}`}
                             >
                                 {dateNumber}

@@ -3,7 +3,6 @@ import styles from "./style.module.css"; // Import CSS Module
 
 function Signup() {
     const [formData, setFormData] = useState({
-        name: "",
         email: "",
         password: ""
     });
@@ -29,7 +28,7 @@ function Signup() {
             const data = await response.json();
             setMessage(data.message);
 
-            if (response.status === 201) {
+            if (response.status === 200) {
                 window.location.href = "/main";
             }
         } catch (error) {

@@ -5,7 +5,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 import "./style.css";
 
-const COLORS = ["#00C49F", "#FFBB28", "#0088FE", "#FF8042"]; // Different colors for the charts
+const COLORS = ["#00C49F", "#FFBB28", "#0088FE", "#FF8042"]; 
 
 function Graph() {
     const [data, setData] = useState(null);
@@ -14,7 +14,7 @@ function Graph() {
     useEffect(() => {
         fetch(`https://tasktracker-backend-4yas.onrender.com/getGraph/${name}`, {
             method: "GET",
-            credentials: "include" // Include cookies in the request
+            credentials: "include" 
         })
         .then(res => res.json())
         .then(data => {
@@ -51,7 +51,7 @@ function Graph() {
                     <h2 className="graph-title">Task Completion Overview for "{name}"</h2>
 
                     <div className="charts">
-                        {/* Pie Chart */}
+                        
                         <div className="chart-container">
                             <h3>Completion Breakdown</h3>
                             <ResponsiveContainer width="100%" height={300}>
@@ -66,7 +66,7 @@ function Graph() {
                             </ResponsiveContainer>
                         </div>
 
-                        {/* Bar Chart */}
+                        
                         <div className="chart-container">
                             <h3>Progress Over Time</h3>
                             <ResponsiveContainer width="100%" height={300}>

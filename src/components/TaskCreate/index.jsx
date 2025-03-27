@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function TaskCreate() {
     const navigate = useNavigate();
     const [message, setMessage] =useState("");
-    const today = new Date().toISOString().split("T")[0]; // Get today's date in YYYY-MM-DD format
+    const today = new Date().toISOString().split("T")[0]; 
 
     const [formData, setFormData] = useState({
         taskName: "",
@@ -63,7 +63,7 @@ function TaskCreate() {
                     value={formData.startDate} 
                     onChange={handleChange} 
                     required 
-                    min={today} // Prevent past dates
+                    min={today} 
                     className="input-field"
                 />
 
@@ -74,7 +74,7 @@ function TaskCreate() {
                     value={formData.endDate} 
                     onChange={handleChange} 
                     required 
-                    min={formData.startDate || today} // End date cannot be before start date
+                    min={formData.startDate || today}
                     className="input-field"
                 />
 

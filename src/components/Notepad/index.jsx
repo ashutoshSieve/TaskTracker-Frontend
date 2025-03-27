@@ -6,7 +6,7 @@ import Footer from "../Footer";
 function Notepad() {
     const [text, setText] = useState("");
 
-    // Fetch the saved notes when the component loads
+    
     useEffect(() => {
         fetch("https://tasktracker-backend-4yas.onrender.com/notepad", {
             method: "GET",
@@ -15,21 +15,21 @@ function Notepad() {
         .then((res) => res.json())
         .then((data) => {
             if (data.success) {
-                setText(data.notePad || "");  // Display existing notes
+                setText(data.notePad || "");  
             }
         })
         .catch((err) => console.error("Error fetching notepad:", err));
     }, []);
 
-    // Save Notes to the Backend
+    
     const handleSave = () => {
         fetch(`https://tasktracker-backend-4yas.onrender.com/notepadAdd`, {
-            method: "PUT",  // ✅ Changed from POST to PUT
+            method: "PUT",  
             credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ text }) // ✅ Wrapped `text` in an object
+            body: JSON.stringify({ text }) 
         })
         .then((res) => res.json())
         .then((data) => {

@@ -26,7 +26,7 @@ function TaskDetails() {
     const currentMonthName = monthNames[month];
 
     useEffect(() => {
-        fetch(`http://localhost:5000/details/${id}`, {
+        fetch(`https://tasktracker-backend-4yas.onrender.com/details/${id}`, {
             method: "GET",
             credentials: "include",
         })
@@ -43,7 +43,7 @@ function TaskDetails() {
     }, [id]);
 
     const updateMonthHeading = () => {
-        fetch(`http://localhost:5000/updateMonthHeading/${id}`, {
+        fetch(`https://tasktracker-backend-4yas.onrender.com/updateMonthHeading/${id}`, {
             method: "PUT",
             credentials: "include",
             headers: {

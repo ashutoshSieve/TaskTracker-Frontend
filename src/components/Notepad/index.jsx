@@ -5,7 +5,7 @@ import Footer from "../Footer";
 
 function Notepad() {
     const [text, setText] = useState("");
-
+    const [firstText, setfirstText] = useState("");
     
     useEffect(() => {
         fetch("https://tasktracker-backend-4yas.onrender.com/notepad", {
@@ -15,6 +15,7 @@ function Notepad() {
         .then((res) => res.json())
         .then((data) => {
             if (data.success) {
+                setfirstText(data.notePad);
                 setText(data.notePad || "");  
             }
         })
@@ -29,12 +30,12 @@ function Notepad() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ text }) 
+            body: JSON.stringify({ text, firstText }) 
         })
         .then((res) => res.json())
         .then((data) => {
             if (data.success) {
-                alert("Note saved successfully!");
+                window.location.reload();
             }
         })
         .catch((err) => console.error("Error saving note:", err));

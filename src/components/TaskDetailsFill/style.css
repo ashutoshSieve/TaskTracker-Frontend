@@ -1,4 +1,4 @@
-/* ===== General Page Styling ===== */
+
 .task-details-page {
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* ===== Container Styling ===== */
+
 .task-details-container {
     width: 90%;
     max-width: 800px;
@@ -20,7 +20,7 @@
     text-align: center;
 }
 
-/* ===== Past Tracks Button ===== */
+
 .past-tracks-btn {
     background: #ff6b6b;
     color: white;
@@ -37,7 +37,7 @@
     background: #e63946;
 }
 
-/* ===== Month Heading Styling ===== */
+
 .month-heading-container {
     display: flex;
     align-items: center;
@@ -75,14 +75,14 @@
     background: #217dbb;
 }
 
-/* ===== Current Month Styling ===== */
+
 .current-month {
     font-size: 20px;
     color: #555;
     margin-bottom: 15px;
 }
 
-/* ===== Task Card Styling ===== */
+
 .task-card {
     background: white;
     padding: 15px;
@@ -103,7 +103,7 @@
     color: #666;
 }
 
-/* ===== Beautiful Calendar Styling ===== */
+
 .calendar {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -116,7 +116,7 @@
     max-width: 600px;
 }
 
-/* Calendar Days */
+
 .calendar-day {
     display: flex;
     align-items: center;
@@ -140,13 +140,13 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Past Dates */
+
 .past-date {
     background: #ddd !important;
     color: #888 !important;
 }
 
-/* ===== Footer Styling ===== */
+
 .footer {
     width: 100%;
     padding: 15px;
@@ -157,7 +157,7 @@
     margin-top: 20px;
 }
 
-/* ===== Responsive Design ===== */
+
 @media (max-width: 768px) {
     .task-details-container {
         width: 95%;

@@ -10,10 +10,10 @@ function OnGoing() {
     const navigate = useNavigate();
     const [tasks, setTasks] = useState([]);
     const [showWarn, setShowWarn] = useState(false);
-    const [taskToDelete, setTaskToDelete] = useState(null); // Store task ID to delete
+    const [taskToDelete, setTaskToDelete] = useState(null); 
 
     const handleTaskClick = (id) => {
-        navigate(`/taskDetails/${id}`); // Navigate to Task Details Page
+        navigate(`/taskDetails/${id}`);
     };
 
     useEffect(() => {
@@ -32,8 +32,8 @@ function OnGoing() {
     }, []);
 
     const handleDeleteClick = (id) => {
-        setTaskToDelete(id); // Store task ID
-        setShowWarn(true); // Show confirmation popup
+        setTaskToDelete(id); 
+        setShowWarn(true); 
     };
 
     const confirmDelete = () => {
@@ -46,7 +46,7 @@ function OnGoing() {
         .then((res) => res.json())
         .then((data) => {
             console.log("Task deleted:", data);
-            setTasks((prevTasks) => prevTasks.filter((task) => task._id !== taskToDelete)); // Remove from UI
+            setTasks((prevTasks) => prevTasks.filter((task) => task._id !== taskToDelete));
             setShowWarn(false);
             setTaskToDelete(null);
         })
@@ -81,7 +81,7 @@ function OnGoing() {
             </div>
             <Footer />
 
-            {/* Warn Component for Delete Confirmation */}
+            
             <Warn 
                 show={showWarn} 
                 onClose={() => setShowWarn(false)} 

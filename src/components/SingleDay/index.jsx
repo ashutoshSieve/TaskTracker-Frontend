@@ -29,7 +29,7 @@ function SingleDay() {
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/workDetail/${id}/${taskName}?date=${date}&month=${month}&year=${year}`, {
+                const response = await fetch(`https://tasktracker-backend-4yas.onrender.com/workDetail/${id}/${taskName}?date=${date}&month=${month}&year=${year}`, {
                     method: "GET",
                     credentials: "include",
                 });
@@ -46,7 +46,7 @@ function SingleDay() {
         if (newTask.trim() === "") return;
 
         try {
-            await fetch("http://localhost:5000/addTask", {
+            await fetch("https://tasktracker-backend-4yas.onrender.com/addTask", {
                 method: "POST",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -62,7 +62,7 @@ function SingleDay() {
 
     const deleteTask = async (taskText) => {
         try {
-            await fetch("http://localhost:5000/deleteTask", {
+            await fetch("https://tasktracker-backend-4yas.onrender.com/deleteTask", {
                 method: "DELETE",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -76,7 +76,7 @@ function SingleDay() {
 
     const saveEditing = async (oldTaskText) => {
         try {
-            await fetch("http://localhost:5000/updateTask", {
+            await fetch("https://tasktracker-backend-4yas.onrender.com/updateTask", {
                 method: "PUT",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -95,7 +95,7 @@ function SingleDay() {
                 task.text === taskText ? { ...task, isComplete: !task.isComplete } : task
             );
     
-            await fetch("http://localhost:5000/toggleTaskCompletion", {
+            await fetch("https://tasktracker-backend-4yas.onrender.com/toggleTaskCompletion", {
                 method: "PUT",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },

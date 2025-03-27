@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 function Warn({ show, onClose, onConfirm }) {
-    if (!show) return null; // Hide the warning if not triggered
+    if (!show) return null; 
 
     return (
         <div className="warn-overlay">

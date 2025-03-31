@@ -107,6 +107,28 @@
 }
 
 
+.passwordContainer {
+    position: relative;
+    width: 100%;
+}
+
+.passwordContainer input {
+    width: 100%;
+    padding-right: 40px; /* Space for eye icon */
+}
+
+.togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
 @media (max-width: 768px) {
     .signupCard {
         width: 90%;

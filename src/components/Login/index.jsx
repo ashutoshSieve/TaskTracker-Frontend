@@ -7,6 +7,7 @@ function Signup() {
         password: ""
     });
     const [message, setMessage] = useState("");
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -68,14 +69,24 @@ function Signup() {
                         required
                         className={styles.inputField}
                     />
-                    <input type="password" 
-                        name="password" 
-                        placeholder="Password" 
-                        value={formData.password} 
-                        onChange={handleChange} 
-                        required
-                        className={styles.inputField}
-                    />
+                    <div className={styles.passwordContainer}>
+                        <input 
+                            type={showPassword ? "text" : "password"} 
+                            name="password" 
+                            placeholder="Password" 
+                            value={formData.password} 
+                            onChange={handleChange} 
+                            required
+                            className={styles.inputField}
+                        />
+                        <button 
+                            type="button" 
+                            onClick={() => setShowPassword(!showPassword)} 
+                            className={styles.togglePassword}
+                        >
+                            {showPassword ? "👁️" : "🙈"} 
+                        </button>
+                    </div>
                     <button type="submit" className={styles.signupButton}>Login</button>
                 </form>
                 <p className={styles.signupText}>Or sign in with</p>

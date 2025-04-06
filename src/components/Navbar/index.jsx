@@ -27,7 +27,7 @@ function Navbar() {
             });
 
             if (response.ok) {
-                navigate("/login");
+                navigate("/");
             } else {
                 console.error("Logout failed");
             }

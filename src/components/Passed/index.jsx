@@ -11,7 +11,7 @@ function Passed() {
     const [subHeadings, setSubHeadings] = useState({});
 
     useEffect(() => {
-        fetch(`https://tasktracker-backend-4yas.onrender.com/details/${id}`, {
+        fetch(`https://tasktracker-backend-uj5o.onrender.com/details/${id}`, {
             method: "GET",
             credentials: "include"
         })

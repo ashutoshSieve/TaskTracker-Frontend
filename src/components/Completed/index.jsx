@@ -15,7 +15,7 @@ function Completed(){
     };
 
     useEffect(() => {
-        fetch("https://tasktracker-backend-4yas.onrender.com/completed", {
+        fetch("https://tasktracker-backend-uj5o.onrender.com/completed", {
             method: "GET",
             credentials: "include",
         })

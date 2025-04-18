@@ -17,7 +17,7 @@ function Signup() {
         e.preventDefault();
 
         try {
-            const response = await fetch("https://tasktracker-backend-4yas.onrender.com/login", {
+            const response = await fetch("https://tasktracker-backend-uj5o.onrender.com/login", {
                 method: "POST",
                 credentials: "include",
                 headers: {
@@ -38,11 +38,11 @@ function Signup() {
     };
 
     const handleGoogleLogin = () => {
-        window.location.href = "https://tasktracker-backend-4yas.onrender.com/google";
+        window.location.href = "https://tasktracker-backend-uj5o.onrender.com/google";
     };
 
     useEffect(() => {
-        fetch("https://tasktracker-backend-4yas.onrender.com/verify-token", {
+        fetch("https://tasktracker-backend-uj5o.onrender.com/verify-token", {
             method: "GET",
             credentials: "include"
         })

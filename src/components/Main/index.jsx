@@ -11,7 +11,7 @@ function Main() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("https://tasktracker-backend-4yas.onrender.com/home", {
+        fetch("https://tasktracker-backend-uj5o.onrender.com/home", {
             method: "GET",
             credentials: "include",
         })

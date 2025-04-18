@@ -8,7 +8,7 @@ function Notepad() {
     const [firstText, setfirstText] = useState("");
     
     useEffect(() => {
-        fetch("https://tasktracker-backend-4yas.onrender.com/notepad", {
+        fetch("https://tasktracker-backend-uj5o.onrender.com/notepad", {
             method: "GET",
             credentials: "include",
         })
@@ -24,7 +24,7 @@ function Notepad() {
 
     
     const handleSave = () => {
-        fetch(`https://tasktracker-backend-4yas.onrender.com/notepadAdd`, {
+        fetch(`https://tasktracker-backend-uj5o.onrender.com/notepadAdd`, {
             method: "PUT",  
             credentials: "include",
             headers: {

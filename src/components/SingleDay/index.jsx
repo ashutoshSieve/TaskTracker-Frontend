@@ -29,7 +29,7 @@ function SingleDay() {
     useEffect(() => {
         const fetchTasks = async () => {
             try {
-                const response = await fetch(`https://tasktracker-backend-4yas.onrender.com/workDetail/${id}/${taskName}?date=${date}&month=${month}&year=${year}`, {
+                const response = await fetch(`https://tasktracker-backend-uj5o.onrender.com/workDetail/${id}/${taskName}?date=${date}&month=${month}&year=${year}`, {
                     method: "GET",
                     credentials: "include",
                 });
@@ -46,7 +46,7 @@ function SingleDay() {
         if (newTask.trim() === "") return;
 
         try {
-            await fetch("https://tasktracker-backend-4yas.onrender.com/addTask", {
+            await fetch("https://tasktracker-backend-uj5o.onrender.com/addTask", {
                 method: "POST",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -62,7 +62,7 @@ function SingleDay() {
 
     const deleteTask = async (taskText) => {
         try {
-            await fetch("https://tasktracker-backend-4yas.onrender.com/deleteTask", {
+            await fetch("https://tasktracker-backend-uj5o.onrender.com/deleteTask", {
                 method: "DELETE",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -76,7 +76,7 @@ function SingleDay() {
 
     const saveEditing = async (oldTaskText) => {
         try {
-            await fetch("https://tasktracker-backend-4yas.onrender.com/updateTask", {
+            await fetch("https://tasktracker-backend-uj5o.onrender.com/updateTask", {
                 method: "PUT",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },
@@ -95,7 +95,7 @@ function SingleDay() {
                 task.text === taskText ? { ...task, isComplete: !task.isComplete } : task
             );
     
-            await fetch("https://tasktracker-backend-4yas.onrender.com/toggleTaskCompletion", {
+            await fetch("https://tasktracker-backend-uj5o.onrender.com/toggleTaskCompletion", {
                 method: "PUT",
                 credentials: "include",
                 headers: { "Content-Type": "application/json" },

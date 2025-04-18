@@ -12,7 +12,7 @@ function Graph() {
     const { name } = useParams(); 
 
     useEffect(() => {
-        fetch(`https://tasktracker-backend-4yas.onrender.com/getGraph/${name}`, {
+        fetch(`https://tasktracker-backend-uj5o.onrender.com/getGraph/${name}`, {
             method: "GET",
             credentials: "include" 
         })

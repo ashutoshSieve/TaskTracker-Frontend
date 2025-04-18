@@ -21,7 +21,7 @@ function Navbar() {
 
     const handleLogout = async () => {
         try {
-            const response = await fetch("https://tasktracker-backend-4yas.onrender.com/logout", {
+            const response = await fetch("https://tasktracker-backend-uj5o.onrender.com/logout", {
                 method: "GET",
                 credentials: "include",
             });

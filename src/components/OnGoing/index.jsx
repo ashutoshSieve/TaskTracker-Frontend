@@ -17,7 +17,7 @@ function OnGoing() {
     };
 
     useEffect(() => {
-        fetch("https://tasktracker-backend-4yas.onrender.com/onGoings", {
+        fetch("https://tasktracker-backend-uj5o.onrender.com/onGoings", {
             method: "GET",
             credentials: "include",
         })
@@ -39,7 +39,7 @@ function OnGoing() {
     const confirmDelete = () => {
         if (!taskToDelete) return;
 
-        fetch(`https://tasktracker-backend-4yas.onrender.com/deleteTask/${taskToDelete}`, {
+        fetch(`https://tasktracker-backend-uj5o.onrender.com/deleteTask/${taskToDelete}`, {
             method: "DELETE",
             credentials: "include",
         })
